@@ -1,0 +1,535 @@
+@import '../../sass/mixin';
+@import '../../sass/variable';
+
+.contact-menu{
+    &__button-slide{
+        display: block;
+    }
+    .container.-letter{
+        position: absolute;
+        top:90%;
+        left: 0;
+        display: block;
+        height: auto;
+    }
+    .slidee:checked + img{
+        display: block;
+        opacity: 1;
+    }
+    &__button-slide{
+        position: absolute;
+        left: 50%;
+        bottom: 0%;
+        transform: translateX(-50%);
+        button{
+            height: $px5;
+            width: $px36;
+            background-color: $color-deepgrey;
+            border: none;
+            margin-left: $px10;
+            label{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        z-index: 9999;
+    }
+    &__name,&__sub,&__time{
+        position: absolute;
+        padding-top: initial;
+        padding-bottom: initial;
+        display: block;
+        color: $color-deepgrey;
+    }
+    &__name{
+        font-size: 25.08vw;
+        font-family: $font-poster;
+        left: 12.54%;
+        top:1vh;
+    }
+    &__sub{
+        top:27%;
+        left:43%;
+        font-size: 5.47vw;
+        font-family: $font-poster;
+    }
+    &__time{
+        top:64%;
+        left: 69%;
+        font-size: 2.989vw;
+        font-family: $font-poster2;
+        font-style: italic;
+    }
+    .container.-sub{
+        position:absolute;
+        top: 0;
+        left: 0;
+        padding-top: inherit;
+        padding-bottom: initial;
+        height:$px32;
+        align-items: center;
+        background-color: rgba(192,192,192,0.1);
+        .submenu{
+            background-color:initial;
+            a{
+                color:$color-deepgrey;
+                &:hover{
+                    color: $color-gold;
+                    border-bottom: $px1 solid $color-gold;
+                }
+            }
+            span{
+                color: $color-deepgrey;
+            }
+        }
+    }
+    &__search{
+        background-color: initial;
+        input{
+            background-color: initial;
+            padding-left: $px16;
+            border-left: $px1 solid $color-white;
+        }
+    }
+}
+.introduce{
+    position: relative;
+    &__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 56.37vh;
+        width: 19.53vw;
+        z-index: 100;
+        img{
+            object-position: right top;
+        }
+        &.-right{
+            left: initial;
+            right: 0;
+            height: $px217;
+            width: $px176;
+            img{
+                object-position: left bottom;
+                object-fit: fill;
+            }
+        }
+    }
+    .container{
+        text-align: center;
+        padding-top: $px90;
+        padding-bottom: $px65;
+    }
+    @include loadTitle;
+    &__detail{
+        position: relative;
+        font-size: $r-1-6;
+        color: $color-gray;
+        padding: 0 $px100;
+        z-index: 150;
+    }
+    &__btn{
+        padding: $px5 $px20;
+        font-size: $r-1-2;
+        background-color: $color-black;
+        color: $color-white;
+        text-transform: uppercase;
+        border: none;
+        margin-top: $px25;
+        &:hover{
+            background-color: $color-gold;
+        }
+
+    }
+}
+.productH{
+    &__background{
+        height: 99.2vh;
+        img{
+            position: relative;
+            z-index: 110;
+        }
+    }
+    &__detail{
+        position: relative;
+        width: 82.9%    ;
+        margin: -370px auto 0 auto;
+        z-index: 111;
+        padding: $px96 $px68 $px154 $px97;
+        background-color: $color-white;
+        display: flex;
+    }
+    &__img{
+        height: 78.94vh;
+        width: 52.5%;
+        position: relative;
+        overflow: hidden;
+        &-type{
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-transform: uppercase;
+            font-size: 3.189rem;
+            padding: $px50 $px70 $px10 $px70;
+            background-color: $color-gold;
+            color: $color-white;
+            transform: rotate(-45deg) translate(-17%,-73%);
+        }
+    }
+    &__info{
+        width: $px262;
+        padding-left: $px1;
+        &-title{
+            margin-top: $px20;
+            font-size: $r-2-5;
+            text-transform: uppercase;
+        }
+        &-img{
+            width: 63px;
+            margin-top: 5px;
+        }
+        &-price{
+            font-size: $r-2-5;
+            color: $color-gold;
+            margin-top: $px30;
+            position: relative;
+            span{
+                position: absolute;
+                font-size: $r-1-75;
+                top: 0;
+                right: 65%;
+            }
+        }
+        &-btn{
+            font-size: $r-1-2;
+            background-color: $color-black;
+            color: $color-white;
+            padding: $px5 $px15;
+            text-transform: uppercase;
+            border: none;
+            margin-top: $px38;
+            &:hover{
+                background-color: $color-gold;
+            }
+        }
+        &-desc{
+            font-size: $r-1-7;
+            color: $color-gray;
+            margin-top: $px25;
+        }
+        &-time{
+            margin-top: $px53;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            text-align: center;
+            color: $color-gold;
+            &-date{
+                border: $px1 solid $color-gold;
+                width: 100%;
+                height: 100%;
+                padding: $px20 0;
+                p{
+                    &:nth-child(1){
+                        font-size: $r-3-4;
+                    }
+                    &:nth-child(2){
+                        font-size: $r-1-4;
+                        text-transform: uppercase;
+                        margin-top: $px1;
+                    }
+                }
+            }
+        }
+    }
+}
+@include setProduct;
+.newpr{
+    @include RightLeft;
+    @include loadTitle;
+}
+.gallery{
+    padding: $px100 0;
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    &__img{
+        height: $px300;
+        position: relative;
+        transition: all 0.5s ease;
+        &:hover{
+            border: $px4 solid $color-gold;
+            .gallery__brand{
+                opacity: 1;
+            }
+        }
+    }
+    &__brand{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        color: $color-white;
+        opacity: 0;
+        transition: all .5s ease;
+        &-name{
+            font-size:$r-5-2;
+            letter-spacing: $px3;
+            text-transform: uppercase;
+            padding: $px10 $px20;
+            border-top: $px1 solid $color-white;
+            border-bottom: $px1 solid $color-white;
+            &::before{
+                content: "";
+                position: absolute;
+                height: $px108;
+                width: $px1;
+                background-color: $color-white;
+                left: $px10;
+                top: -2%;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                height: $px108;
+                width: 1px;
+                background-color: $color-white;
+                right: $px10;
+                top: -2%;
+            }
+        }
+        &-time{
+            letter-spacing: $px5;
+            margin-bottom: $px5;
+        }
+    }
+}
+
+.block{
+    padding: $px95 0;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+    }
+}
+.blog{
+    text-align: center;
+    grid-column: 1/7;
+    @include loadTitle;
+    @include setBlogs;
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: $px30;
+        margin-top: $px10;
+    }
+}
+.customer{
+    text-align: center;
+    grid-column: 7/11;
+    margin-left: $px53;
+    @include loadTitle;
+    &__icon{
+        margin: $px10 auto $px22 auto ;
+        font-size: $r-2-4;
+        color: $color-white;
+        background-color: $color-gold;
+        width: $px60;
+        height: $px60;
+        border-radius: 50%;
+        i::before{
+            display: block;
+            margin-top: 82%;
+        }
+    }
+    &__content{
+        color: $color-gray;
+        font-size: $r-1-4;
+        span{
+            display: block;
+        }
+    }
+    &__link{
+        display: block;
+        color: $color-gray;
+        font-size: $r-1-4;
+        opacity: .7;
+        margin-top:$px5;
+    }
+    &__img{
+        display: block;
+        height: $px102;
+        width: $px102;
+        margin: $px25 auto $px20 auto;
+        box-sizing: border-box;
+        overflow: hidden;
+        border-radius: 10%;
+        img{
+            object-position: top right;
+            transform: scale(1.8);
+        }
+    }
+    &__name{
+        text-transform: uppercase;
+        font-size: $r-1-4;
+    }
+    &__sub{
+        opacity: .5;
+        font-size: 12;
+        font-style: italic;
+    }
+    &__btn{
+        display: block;
+        margin: $px35 auto 0 auto;
+        button{
+            height: $px5;
+            width: $px5;
+            background-color: $color-deepgrey;
+            border: none;
+            border-radius: 50%;
+            margin-left: $px5;
+            &:nth-child(1){
+                background-color: $color-gold;
+            }
+        }
+    }
+}
+@media all and (max-width:$breakpoint-2xl){
+    .block{
+        .container{
+            grid-template-columns: repeat(1,1fr);
+            grid-row-gap: $px30;
+        }
+    }
+    .blog{
+        grid-column: initial;
+    }
+    .customer{
+        grid-column: initial;
+        &__content{
+            font-size: $r-2;
+        }
+        &__img{
+            height:$px200;
+            width: $px200;
+        }
+        &__name{
+            font-size: $r-2;
+        }
+        &__sub{
+            font-size: $r-1-7;
+        }
+        &__btn{
+            button{
+                height: $px10;
+                width: $px10;
+            }
+        }
+    }
+}
+
+@media all and (max-width:$breakpoint-xl){
+    .newpr{
+        .newproduct__icon{
+            &.-right{
+                right: 2%;
+            }
+            &.-left{
+                left: 2%;
+            }
+        }
+    }
+    .supper{
+        .newproduct{
+            &__icon{
+                &.-right{
+                    right: 2%;
+                }
+                &.-left{
+                    left: 2%;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width:$breakpoint-lg){
+    // #slide{
+    //     display: none !important;
+    // }
+
+    .supper{
+        .newproduct{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    .productH{
+        &__detail{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        &__img{
+            height: 50vh;
+            width: 100%;
+        }
+    }
+    .introduce{
+        margin-top: $px90;
+    }
+
+}
+@media all and (max-width:$breakpoint-md){
+    .productH{
+        &__detail{
+            grid-template-columns: repeat(2,1fr);
+            padding: $px96 $px20 $px154 $px20;
+        }
+        &__info{
+            width: 100%;
+            &-title{
+                font-size: $r-2;
+            }
+            &-price{
+                margin-top: $px10;
+            }
+            &-btn{
+                margin-top: $px13;
+            }
+            &-time{
+                margin-top: $px30;
+            }
+        }
+    }
+    .gallery{
+        &__list{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    .blog{
+        &__list{
+            grid-template-columns: repeat(1,1fr);
+            grid-row-gap: $px30;
+        }
+    }
+}
+@media all and (max-width:$breakpoint-sm){
+    .productH{
+        &__detail{
+            grid-template-columns: repeat(1,1fr);
+            padding: $px96 $px20 $px154 $px20;
+            grid-row-gap: $px30;
+        }
+    }
+    .gallery{
+        &__list{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    .supper{
+        .newproduct{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}

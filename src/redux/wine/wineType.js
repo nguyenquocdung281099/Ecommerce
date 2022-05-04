@@ -1,0 +1,2 @@
+export const FETCH_WINE = 'FETCH_WINE';
+export const UPDATE_RATTING = 'UPDATE_RATTING';

@@ -1,0 +1,1 @@
+export const FETCH_HOT_TREND_WINE ='FETCH_HOT_TREND_WINE';

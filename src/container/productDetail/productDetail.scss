@@ -1,0 +1,222 @@
+@import '../../sass/variable';
+@mixin setImg($width,$height,$fit) {
+    width: $width;
+    height: $height;
+    object-fit:$fit ;
+    display: block;
+
+}
+
+.detail{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: $px30;
+    }
+    &__box{
+        display: flex;
+        border: $px2 solid $color-border;
+        padding: $px20 0;
+    }
+    &__img{
+        width: 550px;
+        img{
+            margin: 0 auto;
+            @include setImg(9.93vw,60.87vh ,contain )
+        }
+    }
+    &__info{
+        &-name{
+            font-size: $r-2-8;
+            text-transform: uppercase;
+        }
+        img{
+            margin-top: $px5;
+            margin-bottom: $px18;
+            @include setImg($px65,$px10 , scale-down )
+        }
+        &-price{
+            display: inline;
+            font-size: $r-3-4;
+            color: $color-gold;
+            position: relative;
+            span{
+                position: absolute;
+                top: 0;
+                left: 103%;
+                font-size: $r-1-7;
+            }
+        }
+        &-star{
+            margin-top: $px18 ;
+            padding: $px10 0;
+            border-top: $px1 solid $color-border;
+            border-bottom: $px1 solid $color-border;
+            color: $color-smokegrey;
+            font-size: $r-1-5;
+            span{
+                margin-left: $px10;
+            }
+        }
+        &-title{
+            font-size: $r-1-6;
+            text-transform: uppercase;
+            color: $color-smokegrey;
+            margin: $px20 0 $px10 0;
+        }
+        &-color{
+            display: flex;
+            &-box{
+                height: $px30;
+                width: $px30;
+            }
+        }
+        &-number{
+            font-size: $r-1-6;
+            font-weight: bold;
+            div{
+                display: inline-block;
+                height: auto;
+                padding: $px2 0 ;
+                background-color: $color-border;
+                button{
+                    color: $color-smokegrey;
+                    background-color: initial;
+                    border: none;
+                    margin: 0 $px10;
+                }
+                input{
+                    color: $color-smokegrey;
+                    text-align: center;
+                    width: $px63;
+                    padding: $px3 0;
+                }
+            }
+            &>button{
+                background-color: initial;
+                border: none;
+                font-size: $r-1-2;
+                text-transform: uppercase;
+                color: $color-white;
+                background-color: $color-black;
+                padding: 7.8px $px20;
+                margin-left: $px17;
+                &:hover{
+                    background-color: $color-gold;
+                }
+            }
+        }
+        &-icon{
+            padding-top: $px20;
+        }
+        &-content{
+            font-size: $r-1-3;
+            color: $color-gray;
+            line-height: 150%;
+        }
+        &-share{
+            padding: $px5 $px10;
+            margin: $px20 0;
+            color: $color-white;
+            background-color: $color-facebook;
+            border: none;
+            font-size: $r-1-7;
+            font-weight: bold;
+            span{
+                margin-left: $px10;
+            }
+        }
+        &-sub{
+            margin-top: $px10;
+            font-size: $r-1-5;
+            font-style: italic;
+            color: $color-gray;
+        }
+    }
+}
+.relative{
+    padding: $px100 0 $px150 0;
+}
+.facebook{
+    margin: $px50 0;
+}
+@media all and (max-width:$breakpoint-2xl){
+    .detail{
+        .container{
+            grid-template-columns: repeat(1,1fr);
+            grid-row-gap: $px40;
+        }
+        &__img{
+            width: 100%;
+            img{
+                width: 30%;
+            }
+        }
+    }
+}
+@media all and (max-width:$breakpoint-xl){
+    .relative{
+        .newproduct{
+            &__icon{
+                &.-right{
+                    right: 2%;
+                }
+                &.-left{
+                    left: 2%;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width:$breakpoint-lg){
+    .relative{
+        .newproduct{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    .hilight{
+        .container{
+            flex-direction: column;
+        }
+        &__img{
+            width: 100%;
+            margin-top: $px20;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+@media all and (max-width:$breakpoint-md){
+    .detail{
+        &__img{
+            width: 100%;
+            img{
+                width: 60%;
+            }
+        }
+    }
+}
+@media all and (max-width:$breakpoint-sm){
+    .detail{
+        &__img{
+            width: 100%;
+            img{
+                width: 90%;
+            }
+        }
+    }
+    .hilight{
+        .container{
+            flex-direction: column;
+        }
+        &__content{
+            padding-right: initial;
+        }
+    }
+    .relative{
+        .newproduct{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}

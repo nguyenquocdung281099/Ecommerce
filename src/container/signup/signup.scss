@@ -1,0 +1,61 @@
+@import '../../sass/variable';
+.signup{
+    padding: $px30 0 $px100 0;
+    &__box{
+        padding: $px40 $px65;
+        border: 1px solid $color-border;
+        &-title{
+            margin-bottom: $px18;
+            font-size: $r-1-8;
+            text-transform: uppercase;
+            &.-check{
+                margin-top: $px30;
+            }
+        }
+        &-input{
+            display: flex;
+            input{
+                width: 100%;
+                height: $px28;
+                border: 1px solid $color-border;
+            }
+            p{
+                font-size: $r-1-4;
+                width: $px85;
+            }
+            &:nth-child(n+3){
+                margin-top: $px27;
+            }
+            &.-confir{
+                p{
+                    width: initial;
+                    white-space: nowrap;
+                    margin-right: $px15;
+                }
+            }
+        }
+        &-send{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: $px20;
+            button{
+                color: $color-special3;
+                font-size: $r-1-2;
+                text-transform: uppercase;
+                padding: $px5 $px10;
+                background-color: $color-black;
+                border: none;
+                &:nth-child(1){
+                    margin-right: $px10;
+                }
+            }
+        }
+        &-message{
+            text-align: center;
+            margin: $px20;
+            font-size: $r-1-5;
+            font-style: italic;
+            color: red;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@import '../../../sass/variable';
+@mixin button {
+    text-align: center;
+    color: $color-white;
+    text-transform: capitalize;
+    font-size: $r-1-8;
+    padding: $px10 0;
+    width: $px100;
+    border: none;
+    &:hover{
+        background-color: $color-blue;
+    }
+}
+.admProduct{
+    .Container{
+        &>a{
+            display: inline-block;
+            padding: $px10 $px15;
+            margin: $px20 0;
+            border: none;
+            border-radius: $px5;
+            background-color: $color-blue;
+            i{
+                font-size: $r-1-8;
+                color: $color-grey-blue;
+                &::before{
+                    margin-right: $px10;
+                }
+            }
+            &:hover{
+                i{
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    table{
+        text-transform: uppercase;
+        background-color: $color-secondary;
+        border-collapse: collapse;
+        width: 100%;
+        td,th{
+            border: $px1 solid $color-border;
+            padding: $px10 0;
+            font-size: $r-1-4;
+        }
+        tr{
+            td{
+                padding-left: $px20;
+                &:nth-child(5){
+                    text-align: center;
+                }
+            }
+            a{
+                display: inline-block;
+                background-color: $color-green;
+                margin-right: $px20;
+                @include button();
+            }
+            button{
+                background-color: $color-google;
+                @include button();
+            }
+        }
+        img{
+            width: 145px;
+            height: 148px;
+            object-fit: scale-down;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &__btn{
+        display: block;
+        margin: $px20 auto;
+        color: $color-white;
+        padding: $px5 0;
+        text-transform: capitalize;
+        width: $px200;
+        background-color: $color-black;
+        border: none;
+        &:hover{
+            background-color: $color-blue;
+        }
+    }
+}

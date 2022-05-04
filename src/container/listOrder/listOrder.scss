@@ -1,0 +1,55 @@
+@import '../../sass/variable';
+
+.order{
+    padding-top: $px34;
+    padding-bottom: $px90;
+    &__box{
+        margin-right: $px30;
+        table{
+            border-collapse: collapse;
+            border: $px1 solid $color-border;
+            text-transform: uppercase;
+            width: 100%;
+            overflow-x: scroll;
+            tr{
+                font-size: $r-1-4;
+                text-align: center;
+                td{
+                    padding: $px15 $px15;
+                    white-space: nowrap;
+                }
+
+            }
+        }
+    }
+    &__list{
+        width: 100%;
+        padding: $px32 $px43 $px32 $px27;
+        background-color: $color-secondary;
+        border: $px1 solid $color-border;
+        min-width: 529px;
+        &-name{
+            font-size: $r-1-6;
+            text-transform: uppercase;
+        }
+    }
+
+}
+@media all and (max-width:$breakpoint-2xl){
+    .order{
+        .container{
+            flex-direction: column;
+        }
+        &__list{
+            margin-right: initial;
+        }
+        &__info{
+            margin-top: $px30;
+        }
+    }
+}
+@media all and (max-width:$breakpoint-lg){
+    .order{
+        margin-top: $px200;
+    }
+}

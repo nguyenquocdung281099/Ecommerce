@@ -1,0 +1,125 @@
+@import '../../sass/variable';
+.bag{
+    padding-top: $px30;
+    margin-top: $px200;
+    .container{
+        overflow-x: scroll;
+        // min-width: 929px;
+    }
+    &__title{
+        font-size: 4rem;
+        margin-bottom: $px20;
+    }
+    table{
+        font-size: $r-1-7;
+        border-spacing: $px40 ;
+        width: 100%;
+        border-collapse: collapse;
+        height: auto;
+        transition: all .5s ease;
+        overflow-x : scroll;
+        tr{
+            border: 1px solid $color-border;
+            th{
+                text-align: left;
+                padding: $px20;
+            }
+            td{
+                vertical-align: top;
+                padding: $px20;
+                &:nth-child(1){
+                    display: flex;
+                    img{
+                        display: block;
+                        height: $px150;
+                        width: $px150;
+                        object-fit: scale-down;
+                    }
+                    p{
+                        margin-left: $px20;
+                        text-transform: uppercase;
+                    }
+                }
+                button{
+                    text-transform: uppercase;
+                    font-size: $r-1-5;
+                    padding: $px10 $px20;
+                    background-color: initial;
+                    border: $px2 solid $color-dark;
+                    font-weight: 100;
+                    &:hover{
+                        background-color: $color-gold;
+                        color: $color-white;
+                        border: none;
+                        cursor: pointer;
+
+                    }
+                }
+            }
+            .bag__table-count{
+                white-space: nowrap;
+                button{
+                    display: inline;
+                    padding: $px5;
+                    color: $color-smokegrey;
+                    background-color: $color-dark;
+                    border: none;
+                }
+                input{
+                    display: inline;
+                    padding: $px4 $px5 $px4 $px13;
+                    width:$px40;
+                    transform: translateY(-1px);
+                }
+            }
+        }
+    }
+    &__pay{
+        margin: $px50 0;
+        padding: $px40;
+        border: $px1 solid $color-border;
+        display: flex;
+        justify-content: space-around;
+        p{
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight:bolder;
+            color: $color-smokegrey;
+
+            i{
+                margin-top: $px20;
+                display: block;
+                font-size: 3rem;
+                color: $color-gold;
+            }
+        }
+        a{
+            display: block;
+            border: $px2 solid $color-dark;
+            padding: $px25 $px50;
+            text-decoration: none;
+            font-size: $r-2-5;
+            color: $color-dark;
+            text-transform: uppercase;
+            font-weight: bold;
+            &:hover{
+                border: $px2 solid $color-gold;
+                color: $color-white;
+                background-color: $color-gold;
+            }
+        }
+    }
+}
+@media all and (max-width : $breakpoint-lg){
+    .bag{
+        &__pay{
+            flex-direction: column;
+
+            a{
+                width: 240px;
+                margin: $px30 auto;
+            }
+        }
+    }
+}

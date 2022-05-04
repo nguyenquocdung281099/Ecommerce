@@ -1,0 +1,49 @@
+@import '../../../sass/variable';
+.admOrder{
+    .Container{
+        &>select{
+            margin: $px30 0;
+            padding: $px5 $px10;
+            text-transform: uppercase;
+            border: none;
+            border-radius: $px5;
+        }
+    }
+    table{
+        text-transform: uppercase;
+    background-color: $color-secondary;
+    border-collapse: collapse;
+    width: 100%;
+    td,th{
+        border: $px1 solid $color-border;
+        padding: $px10 0;
+        font-size: $r-1-4;
+    }
+    tr{
+        td{
+            padding-left: $px20;
+            &:nth-child(5){
+                padding: 0 0;
+                text-align: center;
+            }
+            &:nth-child(6){
+                display: flex;
+                align-items: center;
+                padding-left: 0;
+                padding-right: 0;
+                select{
+                    margin: 0 auto;
+                    padding: $px5 $px10 ;
+                    text-transform: capitalize;
+                    color: $color-white;
+                    background-color: $color-green;
+                    option{
+                        background-color: $color-white;
+                        color: $color-black;
+                    }
+                }
+            }
+        }
+    }
+    }
+}

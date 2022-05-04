@@ -1,0 +1,58 @@
+@import '../../sass/mixin';
+@import '../../sass/variable';
+@include setPoster;
+@include setPoster1;
+.poster{
+        &__title{
+            margin-bottom: $px25;
+        }
+}
+.introduceP{
+    padding:$px30 0 $px120 0;
+    .container{
+        display: flex;
+    }
+    &__img{
+        img{
+            width: 458px;
+            height: 308px;
+        }
+        margin-right: $px30;
+    }
+    &__content{
+        &-name{
+            text-transform: uppercase;
+            font-size: $r-2-4;
+            letter-spacing: $px2;
+        }
+        &-text{
+            font-size: $r-1-4;
+            color: $color-gray;
+            width: 548px;
+            margin-top: $px15;
+            span{
+                display: block;
+                line-height: 150%;
+            }
+        }
+    }
+}
+@media all and (max-width:$breakpoint-2xl){
+    .introduceP{
+        .container{
+            flex-direction: column;
+        }
+        &__img{
+            margin-right: initial;
+            img{
+                width: 100%;
+            }
+        }
+        &__content{
+            &-text{
+                width: 100%;
+            }
+            margin-top: $px30;
+        }
+    }
+}

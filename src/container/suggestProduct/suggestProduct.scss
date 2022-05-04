@@ -1,0 +1,61 @@
+@import '../../sass/_variable.scss';
+
+.sussgest{
+    padding: $px50 0;
+    h1{
+        text-align: center;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+    &__img{
+        height: 400px;
+        width: 400px;
+        border: $px1 solid $color-border;
+        img{
+            object-fit: scale-down;
+        }
+    }
+    &__file{
+        margin: $px20 0;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+        font-size: $r-1-5;
+        border-radius: 5px;
+        background-color: $color-gold;
+        color: $color-white;
+    }
+    &__box{
+        &>p{
+            font-size: $r-1-7;
+            color: $color-smokegrey;
+        }
+        textarea{
+            margin: $px20 0;
+            width: 70%;
+            height: $px200;
+        }
+    }
+    form{
+        padding: $px40 0;
+        input[type='file']{
+            display: none;
+        }
+        input{
+            padding: $px5 $px15;
+            color: $color-white;
+            background-color: $color-black;
+            font-size: $r-1-7;
+            border: none;
+            cursor: pointer;
+            &:hover{
+                background-color: $color-gold;
+            }
+        }
+    }
+}
+@media all and (max-width:$breakpoint-lg){
+    .sussgest{
+        margin-top: $px190;
+    }
+}

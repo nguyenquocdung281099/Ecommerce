@@ -1,0 +1,71 @@
+@import '../../../sass/variable';
+.admin{
+    overflow: hidden;
+    &-header{
+        &__brand{
+            height:$px50;
+            background-color: $color-blue;
+            display: flex;
+            align-items: center;
+            h1{
+                font-size: 3rem;
+                text-transform: capitalize;
+                color: $color-white;
+                margin-left: $px20;
+            }
+            i{
+                font-size: 2rem;
+                margin-left: $px20;
+                color: $color-grey-blue;
+                cursor: pointer;
+                margin-top: $px4;
+            }
+        }
+        &__menu{
+            display: flex;
+            height: 100%;
+            ul{
+                background-color: $color-white;
+                width: $px200 ;
+                transition: all .35s ease;
+                padding-top:$px50;
+                overflow: hidden;
+                    li{
+                        a{
+                            display: block;
+                            color: $color-smokegrey;
+                            font-size: $r-1-7;
+                            padding: $px20 0;
+                            padding-left: $px20;
+                            &:hover{
+                                background-color: rgba(0, 0, 0, 0.05);
+                            }
+                            i{
+                                width: $px30;
+                            }
+                        }
+                        .admActive{
+                            background-color: rgba(0, 0, 0, 0.05);
+                        }
+                        &>ul{
+                            padding: 0 $px20;
+                        }
+                    }
+            }
+            .menuToggle{
+                margin-left: -$px200;
+            }
+        }
+        &__content{
+            background-color: $background-smoke;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.Container{
+    padding: $px20;
+}
+.apexcharts-canvas.apexchartshj9vl8cx.apexcharts-theme-light.apexcharts-zoomable{
+    width: 100% !important;
+}

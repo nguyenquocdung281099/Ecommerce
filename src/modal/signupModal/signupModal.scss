@@ -1,0 +1,57 @@
+@import '../../sass/variable';
+.modal{
+    &__content{
+        &-title{
+            &.-long{
+                white-space: initial;
+            }
+        }
+        &-btn{
+            &.-double{
+                display: flex;
+                input{
+                    margin-right: $px20;
+                }
+                button{
+                    padding: 0 $px50;
+                    background-color: $color-black;
+                    color: $color-white;
+                    border: none;
+                    &:hover{
+                        background-color:$color-gold;
+                    }
+                }
+            }
+        }
+    }
+}
+#SignupModal.toggleSignupModal{
+    visibility: visible;
+    .modal__content{
+        transform: translate(-50%,0);
+        opacity: 1;
+    }
+}
+@media all and (max-width:$breakpoint-lg){
+    .modal{
+        &__content{
+            &-title{
+                &.-long{
+                    font-size: $r-1-7;
+                }
+            }
+            &-btn{
+                &.-double{
+                    flex-direction: column;
+                input{
+                    margin-right: initial;
+                }
+                button{
+                    margin-top: $px20;
+                    padding: $px10 $px50;
+                }
+                }
+            }
+        }
+    }
+}

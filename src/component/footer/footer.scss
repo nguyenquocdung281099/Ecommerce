@@ -1,0 +1,166 @@
+@import '../../sass/variable';
+footer{
+    .logo{
+        img{
+            height: $px137;
+        }
+    }
+    .contact-us{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        padding-top: $px56;
+        padding-bottom: $px37;
+        color: $color-smokegrey;
+        &__item{
+            &:nth-child(-n+2){
+                text-transform: uppercase;
+                a{
+                    color: $color-smokegrey;
+                    display: block;
+                    line-height: 200%;
+                    font-size: 1.2rem;
+                }
+            }
+            &-title{
+                text-transform: uppercase;
+                color: $color-black;
+                font-size: $r-1-8;
+                margin-bottom: $px5;
+                margin-top: initial;
+            }
+            &:nth-child(n+3){
+                font-size: $r-1-4;
+            }
+            p{
+                line-height: 1.6;
+            }
+            &:nth-child(3){
+                grid-column: 3/5;
+                p{
+                    white-space: nowrap;
+                }
+            }
+            &-send{
+                margin-top: $px20;
+                input{
+                    border: $px0-5 solid $color-dark;
+                    padding: $px6 $px13;
+                    display: inline;
+                    &::placeholder{
+                        font-size: 1.2rem;
+                        font-style: italic;font-family: 'Times New Roman';
+                    }
+                }
+                button{
+                        color: $color-white;
+                        background-color: $color-dark;
+                        position: relative;
+                        border: $px0-5 solid $color-dark;
+                        padding: $px6 $px13;
+                        &:before{
+                            position: absolute;
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-top: $px14 solid transparent;
+                            border-left: $px18 solid $color-dark;
+                            border-bottom: $px14 solid transparent;
+                            top: 50%;
+                            left: 100%;
+                            margin-top: -14.7px;
+                        }
+                        &:hover,&:hover:before{
+                            cursor: pointer;
+                        }
+                }
+            }
+            &:nth-child(4){
+                width: $px294;
+                p{
+                    display: flex;
+                    &:nth-child(n+2){
+                        margin-top: $px10;
+                    }
+                    i{
+                        color: $color-dark;
+                        margin-right: $px10;
+                    }
+                    span{
+                        transform: translateY(-14%);
+                    }
+                }
+            }
+            &-social{
+                margin-top: $px23;
+                a{
+                    color: $color-smokegrey;
+                    font-size: 1.2rem;
+                    &:nth-child(n+2){
+                        margin-left: $px10;
+                    }
+                }
+            }
+            &-break{
+                margin: 0 $px10;
+            }
+            &-envelope{
+                margin-left: $px10;
+            }
+            &-email{
+                font-family: $sub-font;
+                font-style: italic;
+                color: $color-gold;
+            }
+        }
+    }
+}
+
+@media all and (max-width:$breakpoint-xl){
+    footer{
+        .contact-us{
+            grid-template-columns: repeat(2,1fr);
+            grid-row-gap: $px20;
+        }
+    }
+
+}
+
+@media all and (max-width:$breakpoint-md){
+
+    footer{
+        .contact-us{
+            &__item{
+                &:nth-child(3)
+                {
+                    grid-column: 2/4;
+                    grid-row: 2/3;
+                }
+                &:nth-child(4)
+                {
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                }
+            }
+            }
+        }
+}
+@media all and (max-width:$breakpoint-sm){
+
+    footer{
+        .contact-us{
+            grid-template-columns: repeat(1,1fr);
+            &__item{
+                &:nth-child(3)
+                {
+                    grid-column: initial;
+                    grid-row: initial;
+                }
+                &:nth-child(4)
+                {
+                    grid-column: initial;
+                    grid-row: initial;
+                }
+            }
+            }
+        }
+}

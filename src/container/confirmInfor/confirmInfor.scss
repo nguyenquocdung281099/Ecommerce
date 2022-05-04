@@ -1,0 +1,80 @@
+@import '../../sass/variable';
+
+.confirm {
+    &__infor{
+        display: flex;
+        align-items: flex-start;
+        padding:$px50;
+        &-price{
+            width: 100%;
+            text-align: center;
+            i{
+                font-size: $r-2;
+                color: $color-gold;
+                margin-top: $px20;
+            }
+        }
+        h2{
+            font-size: $r-2;
+        }
+    }
+    h1{
+        margin-top: $px50;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 4rem;
+    }
+    &__box{
+        display: flex;
+        align-items: center;
+        margin-top: $px20;
+        p{
+            font-size: $r-1-6;
+            white-space: nowrap;
+            width: $px200;
+        }
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        input,select{
+            width: 300px;
+            padding: $px10 $px20;
+            font-size: $r-1-6;
+            border: $px1 solid $color-border;
+        }
+        input[type='submit']{
+            font-size: 1.598rem;
+            margin-top: $px30;
+            padding: $px7 $px20;
+            border: none;
+            background-color: $color-twitter;
+            color: $color-white;
+            width: $px200;
+            &:hover{
+                cursor: pointer;
+                background-color: $color-gold;
+            }
+        }
+    }
+    .address__input-message{
+        text-align: center;
+        margin-top: $px20;
+    }
+}
+@media all and (max-width:$breakpoint-lg){
+    .confirm{
+        margin-top: $px200;
+        &__infor{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-row-gap: $px30;
+            &-price{
+                text-align: left;
+            }
+        }
+        &__form{
+            grid-row: 2/3;
+        }
+    }
+}

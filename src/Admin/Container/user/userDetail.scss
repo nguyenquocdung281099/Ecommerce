@@ -1,0 +1,65 @@
+@import '../../../sass/variable';
+.admUserDetail{
+    &__message{
+        display: block;
+        font-size: $r-1-8;
+        color: $color-google;
+        font-style: italic;
+        text-align: center;
+        margin: $px20 0;
+    }
+    min-height: 600px;
+    text-align: center;
+    h1{
+        text-align: center;
+    }
+    form{
+        display: inline-block;
+        margin: 0 auto;
+        text-align: initial;
+        background-color: $color-white;
+        padding: $px30;
+    }
+    &__box{
+        display: flex;
+        align-items: center;
+        margin-top: $px20;
+        input,select{
+            padding: $px5;
+            width: 300px;
+        }
+        p{
+            width: $px100;
+            font-size: $r-1-8;
+            text-transform: capitalize;
+            white-space: nowrap;
+            margin-right: $px30;
+        }
+    }
+    &__title{
+        font-size: 3rem;
+        text-transform: capitalize;
+        margin: $px40 0;
+    }
+    &__btn{
+        padding: $px40 0;
+        text-align: center;
+        input,button{
+            width: $px100;
+            padding: $px5;
+            border: none;
+            color: $color-white;
+            background-color: $color-black;
+            text-transform: capitalize;
+            display: inline-block;
+            cursor: pointer;
+            &:hover{
+                background-color: $color-green;
+            }
+        }
+        input{
+            background-color: $color-blue;
+            margin-right: $px20;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+export const NOT_EMPTY = "Not empty";
+export const INVALID_EMAIL = "invalid email";
+export const EMAIL_PASSOWRD_INCORRECT = "Email or password is incorrect";
+export const LAST_NAME = "Last name only accept alphabets and are at least 3 to 12 characters long";
+export const FIRST_NAME = "First name only accept alphabets and are at least 3 to 12 characters long";
+export const EMAIL_EXIT = "Email already exists" ;
+export const PASSWORD = "Current password is incorrect" ;
+export const RE_PASSWORD = "Confirm password is incorrect" ;
+export const INVALID_PHONE = "Invalid phone number"
+export const INVALID_PRICE = 'New Price is a number and is greater than 0'
+export const INVALID_OLD_PRICE = 'Old Price is a number  and is greater than 0'
+export const INVALID_NUMBER_PRODUCT = 'Number Of Products  is a number greater than zero and not a decimal'

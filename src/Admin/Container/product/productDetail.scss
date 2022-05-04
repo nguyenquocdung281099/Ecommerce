@@ -1,0 +1,81 @@
+@import '../../../sass/variable';
+.admDetail{
+    .Container{
+        display: flex;
+    }
+    &__img{
+        height:$px200;
+        width: $px200;
+        margin-right: $px50;
+        img{
+            object-fit: scale-down;
+        }
+        input{
+            display: none;
+        }
+        label{
+            display: block;
+            font-size: $r-1-8;
+            text-transform: capitalize;
+            padding: $px10 0;
+            background-color: $color-blue;
+            color: $color-white;
+            border-radius: $px5;
+            margin-top: $px20;
+            width: $px150;
+            text-align: center;
+            margin-left: $px20;
+            cursor: pointer;
+        }
+    }
+    &__infor{
+        h1{
+            font-size: $r-2;
+            text-transform: capitalize;
+        }
+    }
+    &__box{
+        margin-top: $px20;
+        display: flex;
+        align-items: flex-start;
+        span{
+            font-size: $r-1-8;
+            width: $px200;
+        }
+        input,select,textarea{
+            width: 300px;
+            padding: $px5;
+        }
+        textarea{
+            min-height: $px200;
+        }
+    }
+    &__btn{
+        padding-top: $px30;
+        input,button{
+            width: $px70;
+            text-transform: capitalize;
+            padding: $px7 0;
+            border: none;
+            cursor: pointer;
+            color: $color-white;
+            &:hover{
+                background-color: $color-green;
+            }
+        }
+        input{
+            background-color: $color-blue;
+        }
+        button{
+            background-color: $color-black;
+            margin-left: $px50;
+        }
+    }
+    &__message{
+        text-align: center;
+        margin:$px20 0;
+        font-size: $r-1-8;
+        font-style: italic;
+        color: $color-red;
+    }
+}

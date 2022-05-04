@@ -1,0 +1,458 @@
+@import "./variable";
+
+@mixin setPoster {
+    .poster{
+        padding-top: $px32;
+        &__title{
+            font-size: $r-1-4;
+            color: $color-gray;
+            margin-bottom: $px37;
+            
+            span{
+                color: $color-gold;
+            }
+        }
+    }
+    @media all and (max-width:$breakpoint-lg){
+        .poster{
+            margin-top: $px90;
+        }
+        }
+}
+@mixin setPoster1 {
+    .poster{
+        &__title{
+            margin-bottom: $px10;
+        }
+        &__name{
+            font-size: $r-2-4;
+            text-transform: uppercase;
+        }
+        img{
+            width: $px65;
+            height: $px10;
+            object-fit: scale-down;
+            margin-top: $px5;
+        }
+    }
+    
+}
+@mixin loadTitle {
+    .container{
+        text-align: center;
+    }
+    .introduce__sub{
+        width: $px190;
+        height: $px10;
+        margin: $px10 auto $px30 auto;
+    }
+    .introduce__title{
+        font-size: $r-2-1;
+        text-transform: uppercase;
+    }
+}
+@mixin RightLeft {
+    .container{
+        position: relative;
+    }
+    .newproduct__icon{
+        background: $color-white;
+        border: none;
+        position: absolute;
+        &.-right{
+            top:50%;
+            right: 5%;
+        }
+        &.-left{
+            top:50%;
+            left: 5%;
+        }
+        &:hover{
+            color: $color-gold;
+            cursor: pointer;
+        }
+    }
+
+}
+@mixin setProduct {
+
+    .newproduct{
+        overflow-x: hidden;
+        &__list{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-column-gap: $px30;
+            transition: all .35s ease;
+        }
+        &__item{
+            background-color: $color-white;
+            width: 250px;
+            &:hover{
+                .newproduct__img-sub{
+                    opacity: 1;
+                }
+                .newproduct__img-type{
+                    opacity: 1;
+                }
+                .newproduct__info-name{
+                    color: $color-gold;
+                }
+                .newproduct__info-btn{
+                    background-color: $color-gold;
+                }
+            }
+
+        }
+        &__img{
+            position: relative;
+            width: 100%;
+            height: $px327;
+            padding: $px30 $px68;
+            overflow: hidden;
+            img{
+                object-fit: contain;
+            }
+            &-sub{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: $color-black;
+                color: $color-gray;
+                font-size: $r-1-4;
+                display: flex;
+                justify-content: space-between;
+                opacity: 0;
+                transition: all .5s ease;
+                .fa-heart{
+                    color: $color-white;
+                }
+                
+                &-item{
+                    padding: $px5 $px10;
+                    i{
+                        margin-right: $px8;
+                    }
+                    &:nth-child(2){
+                        border-left: $px0-1 solid $color-darkgray;
+                        border-right: $px0-1 solid $color-darkgray;
+                        
+
+                    }
+                }
+            }
+            &-type{
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: $r-1-6;
+                color: $color-white;
+                padding-bottom: $px5;
+                opacity: 0;
+                transition: all .5s ease;
+                
+                text-transform: capitalize;
+                p{
+                    padding: $px30 $px50 $px5 $px50;
+                    
+                }
+                transform: rotate(-45deg) translate(-18%,-82%);
+                &.-sale{
+                    border-bottom: $px1 solid $color-gold;
+                    p{
+                        background-color: $color-gold;
+                    }
+                }
+                &.-hot{
+                    border-bottom: $px1 solid $color-red;
+                    p{
+                        background-color: $color-red;
+                    }
+                }
+                &.-new{
+                    border-bottom: $px1 solid $color-green;
+                    p{
+                        background-color: $color-green;
+                    }
+                }
+            }
+        }
+
+        &__info{
+            margin-top: $px23;
+            font-size: $r-1-4;
+            &-name{
+                text-transform: uppercase;
+            }
+            &-price{
+                margin-top: $px10;
+                color: $color-gray;
+                span:nth-child(1){
+                    position: relative;
+                    font-size: $r-2-1;
+                    color: $color-gold;
+                    margin-right:$px15 ;
+                    small{
+                        position: absolute;
+                        font-size: $r-1-6;
+                        top: 0;
+                        left: 103%;
+                        
+                    }
+                }
+                span:nth-child(2){
+                    margin-right: $px5;
+                }
+                del{
+                    position: relative;
+                    small{
+                        position: absolute;
+                        font-size: $r-1-2;
+                        top: 0;
+                        left: 103%;
+                    }
+                }
+            }
+            &-btn{
+                margin-top: $px20;
+                font-size: $r-1-2;
+                text-transform: uppercase;
+                padding: $px5 $px12;
+                background-color: $color-black;
+                color: $color-white;
+                border: initial;
+            }
+        }
+        
+
+    }
+
+    
+}
+@mixin setBlogs{
+    .blog__item{
+        text-align: left;
+
+        &-img{
+            height: $px222;
+            width: $px320;
+            position: relative;
+            overflow: hidden;
+            
+            
+            &:hover{
+                &:before{
+                    opacity: .3;
+                    transform: rotate(-34.5deg) translate(-3%,31%);
+
+                }
+                p{
+                    opacity: .8;
+                }
+                & + .blog__item-name{
+                    color: $color-gold;
+                }
+
+            }
+            p{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-size: $r-1-6;
+                padding: $px10;
+                background-color: $color-white;
+                opacity: 0;
+                width: $px40;
+                height: $px40;
+                box-sizing: border-box;
+                border-radius: 50%;
+                text-align: center;
+                transition: all 0.7s ease;
+                i{
+                    display: block;
+                    margin-top: $px3;
+                }
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 130%;
+                height: 130%;
+                background-color: $color-white;
+                opacity: 0;
+                transform: rotate(0) translate(-3%,31%);
+                transition: all 0.7s ease;
+            }
+
+
+        }
+        &-name{
+            font-size: $r-1-8;
+            text-transform: uppercase;
+            margin-top: $px27;
+        }
+        &-sub{
+            opacity: .5;
+            font-size: $r-1-2;
+            margin-top: $px10;
+            
+        }
+        &-author{
+            padding-right: $px5;
+            border-right: $px0-5 solid $color-gray;
+        }
+        &-time{
+            padding: 0 $px5;
+            border-right: $px0-5 solid $color-gray;
+        }
+        &-comment{
+            margin-left: $px5;
+
+        }
+        &-content{
+            margin-top: $px10;
+            font-size: $r-1-4;
+            color: $color-gray;
+        }
+        &-btn{
+            display: block;
+            font-size: $r-1-4;
+            margin-top: $px7;
+            opacity: .7;
+            color: $color-gray;
+        }
+    }
+    
+
+    
+}
+@mixin setProductRow {
+    .productRow{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        text-align: left;
+        &__item{
+            display:flex;
+            padding:  $px26 0 $px43 0;
+            &:nth-child(-n+3){
+                border-bottom: 1px solid $color-border;
+            }
+            &-img{
+                padding: 0 $px82;
+                padding-top: $px20;
+                img{
+                    height: $px292;
+                    width: $px92;
+                }
+            }
+            &-info{
+                width: 26.17vw;
+            }
+            &-name{
+                font-size: $r-2-5;
+                text-transform: uppercase;
+                margin-bottom: $px15;
+            }
+            &-price{
+                position: relative;
+                font-size: $r-3-4;
+                color: $color-gold;
+                display: inline;
+                    span{
+                        position: absolute;
+                        font-size: $r-1-6;
+                        top: 0;
+                        left: 103%;
+
+                    }
+            }
+            &-content{
+                color: $color-gray;
+                margin-top: $px18;
+                font-size: $r-1-3;
+                line-height: 150%;
+            }
+            &-btn{
+                display: flex;
+                margin-top: $px27;
+                align-items: center;
+                a{
+                    border: none;
+                    background-color: $color-black;
+                    color: $color-white;
+                    font-size: $r-1-2;
+                    text-transform: capitalize;
+                    padding: $px5 $px10;
+                    letter-spacing: 1px;
+                    &:hover{
+                        background-color: $color-gold;
+                    }
+                }
+                p{
+                    color: $color-smokegrey;
+                    font-size: $r-1-4;
+                    margin-left: $px34;
+                    span{
+                        margin-left: $px8;
+                    }
+                }
+            }
+            &-start{
+                margin-top: $px10;
+                span{
+                    font-size: $r-1-7;
+                    text-transform: capitalize;
+                    color: $color-smokegrey;
+                }
+            }
+
+        }
+
+    }
+    
+}
+@mixin setForm {
+    form{
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+        grid-row-gap: $px35;
+        label{
+            display: inline-block;
+            font-size: $r-1-4;
+            font-style: italic;
+            width: $px47;
+            span{
+                color: $color-orange;
+            }
+        }
+        input,textarea{
+            grid-column: 2/11;
+        } 
+        input{
+            width: $px780;
+            height: $px41;
+            border: 1px solid $color-border;
+        }
+        textarea{
+            width: $px780;
+            height: $px279;
+            border: $px1 solid $color-border;
+        }
+        input[type="button"]{
+            width: $px123;
+            grid-column: 2/3;
+            margin-top: $px5;
+            text-transform: uppercase;
+            font-size: $r-1-6;
+            border-radius: $px5;
+            background-color: $color-border1;
+            &:hover{
+                color: $color-white;
+                background-color: $color-gold;
+            }
+        }
+    }
+}

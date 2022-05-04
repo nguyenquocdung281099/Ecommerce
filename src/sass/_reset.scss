@@ -1,0 +1,39 @@
+@import './variable';
+*,
+*::before,
+*::after{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: $px10;
+    font-family: 'Times New Roman', Times, serif;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    padding: 0 10%;
+}
+button,input{
+    &:focus{
+        outline: 0;
+    }
+}
+button{
+    &:hover{
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,92 @@
+@import '../../sass/mixin';
+@import '../../sass/variable';
+@include setPoster;
+@include setPoster1;
+.poster{
+        &__title{
+            margin-bottom: $px25;
+        }
+        &__btn{
+            display: flex;
+            justify-content: space-between;
+            a{
+                font-size: 1.4rem;
+                padding: $px10 $px33;
+                background-color: $color-black;
+                color: $color-white;
+                text-transform: uppercase;
+                letter-spacing: $px0-5;
+            }
+        }
+}
+.signin{
+    padding: $px30 0 $px100 0;
+    &__box{
+        padding: $px40 $px65;
+        border: 1px solid $color-border;
+        &-title{
+            margin-bottom: $px12;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            &.-sub{
+                margin-bottom: $px45;
+                font-size: 1.4rem;
+                text-transform: initial;
+            }
+        }
+        &-input{
+            display: flex;
+            input{
+                width: 100%;
+                height: $px28;
+                border: 1px solid $color-border;
+                padding-left: $px20;
+            }
+            p{
+                font-size: 1.4rem;
+                width: $px85;
+            }
+            &:nth-child(n+4){
+                margin-top: $px27;
+            }
+            &.-check{
+                align-items: center;
+                margin-bottom: $px33;
+                margin-top: $px16;
+                input{
+                    width: initial;
+                    margin-left: 8.5%;
+                }
+                label{
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin-left:$px7;
+                }
+            }
+        }
+        &-send{
+            margin-top: $px20;
+            margin-left: 8.5%;
+            button{
+                color: $color-special3;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                padding: $px5 $px10;
+                background-color: $color-black;
+                border: none;
+                &:hover{
+                    background-color: $color-gold;
+                    color:white;
+                }
+            }
+        }
+        &-message{
+            text-align: center;
+            margin: $px20;
+            font-size: $r-1-5;
+            font-style: italic;
+            color: red;
+        }
+    }
+}
+
